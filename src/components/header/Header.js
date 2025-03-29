@@ -68,7 +68,7 @@ const Header = () => {
 
         <a
           className="header__text__button"
-          href="mailto:0xagbero.onchain@ud.me"
+          href="mailto:dev@0xagbero.pw"
         >
           <div className="fire">
             <img src={fire} alt="hot"></img>

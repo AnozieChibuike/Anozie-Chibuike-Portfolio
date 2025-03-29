@@ -11,7 +11,7 @@ const Contact = () => {
   const sendEmail = (e) => {
     alert("Your mail was successfully sent to Joel :) ");
     e.preventDefault();
-    // emailjs.sendForm('ahmad.dev', 'template_4o0m3kr', form.current, 'fVrI6IsoPEo41b4re');
+    emailjs.sendForm("service_8phr9gd", 'template_nt2w71v', form.current, "D_F-qAKq3-fFw9R7V");
     e.target.reset();
   }
 
