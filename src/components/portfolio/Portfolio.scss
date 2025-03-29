@@ -1,0 +1,220 @@
+@import "../../variables";
+@import "../../mixins";
+@import "../../animation";
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $white;
+  color: $black;
+  text-align: center;
+  padding: 3rem 0 5rem;
+  gap: 3rem;
+
+  @include breakpoint-up(large) {
+    padding: 4rem 0 6rem;
+    gap: 5rem;
+  }
+
+  &__header {
+    h1 {
+      font-size: 1.25rem;
+      font-weight: $semi_bold;
+      letter-spacing: -0.32px;
+
+      @include breakpoint-up(large) {
+        font-size: 2rem;
+        line-height: 3rem;
+      }
+    }
+
+    h2 {
+      font-size: 1rem;
+      font-weight: $medium;
+      letter-spacing: -0.32px;
+      color: $dark_grey;
+      margin-top: -0.5rem;
+
+      @include breakpoint-up(large) {
+        font-size: 1.475rem;
+      }
+    }
+  }
+
+  .projects{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 2rem;
+    gap: 2rem;
+    width: 100%;
+    height: auto;
+
+    @include breakpoint-up(medium) {
+      grid-template-columns: 1fr 1fr;
+      padding: 0 3rem;
+    }
+
+    @include breakpoint-up(large) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+    }
+
+
+    .project {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 3rem;
+      background: black;
+      color: white;
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 1rem;
+      width: 100%;
+      height: auto;
+      border-radius: 0.8rem;
+      overflow: hidden;
+
+      @include breakpoint-up(large) {
+        gap: 5rem;
+      }
+
+      &:hover {
+
+        &:nth-of-type(1) {
+          background-image: url('../../images/ebryheemphotography.png');
+        }
+
+        &:nth-of-type(2) {
+          background-image: url('../../images/orm.png');
+        }
+
+        &:nth-of-type(3) {
+          
+          background-image: url('../../images/agberodata.png');
+          
+        }
+
+        &:nth-of-type(4) {
+          background-image: url('../../images/agberochat.png');
+          
+        }
+
+        &:nth-of-type(5) {
+          
+          background-image: url('../../images/x-clone.png');
+        }
+
+        #arrowHead {
+          margin-right: -1.5rem;
+        }
+
+        #arrowTail::before {
+          left: -2.2rem;
+        }
+      }
+
+      h2 {
+        font-size: 1.2rem;
+        font-weight: $semi_bold;
+        letter-spacing: -0.32px;
+        z-index: 2;
+      }
+
+      &__link {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        align-self: flex-start;
+        width: 100%;
+        gap: 0.5rem;
+        z-index: 2;
+
+        h2 {
+          font-size: 1rem;
+          font-weight: $semi_bold;
+          letter-spacing: -0.32px;
+          margin: 0;
+        }
+
+        .link__text {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          color: $white;
+          margin: 0;
+          width: 100%;
+
+          p {
+            font-size: 0.875rem;
+            font-weight: $regular;
+            color: $white;
+            margin: 0;
+          }
+
+          .card__arrow {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            border: 1px solid $white;
+            border-radius: 50%;
+            width: 1rem;
+            height: 1rem;
+            color: $white;
+            transform: scale(1.5);
+
+            #arrowHead {
+              transform: rotate(90deg);
+              font-size: 0.5rem;
+              transition: all 600ms ease-in-out;
+            }
+
+            &::before {
+              position: absolute;
+              top: 50%;
+              content: "";
+              width: 2rem;
+              height: 0.02rem;
+              border-radius: 2rem;
+              left: -1.6rem;
+              background: $white;
+              transition: all 600ms ease-in-out;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.swiper-container {
+  width: 415px;
+
+  @media screen and (min-width: 768px) {
+    width: 730px;
+  }
+  @media screen and (min-width: 1024px) {
+    width: 1000px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 1400px;
+  }
+}
+
+span.swiper-pagination-bullet {
+  background: white;
+  align-items: center;
+  transition: color 300ms ease-in-out;
+}
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  width: 3rem;
+  height: 0.4rem;
+  border-radius: 1rem;
+}

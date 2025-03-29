@@ -1,0 +1,30 @@
+@import 'mixins';
+@import 'animation';
+@import 'variables';
+@import url('https://fonts.googleapis.com/css2?;family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: $black;
+  color: $white;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  cursor: pointer;
+}
+
+li {
+  list-style-type: none;
+}

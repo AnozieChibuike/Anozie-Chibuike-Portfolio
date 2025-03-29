@@ -1,0 +1,295 @@
+.bio {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  background: #ffffff;
+  color: #000000;
+  gap: 2rem;
+  padding: 0 0 4rem;
+}
+@media (min-width: 64em) {
+  .bio {
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding: 0 0 6rem;
+  }
+}
+.bio__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.bio__header__details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+}
+.bio__header__details a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: #000000;
+  gap: 0.5rem;
+  padding: 0.625rem;
+  width: auto;
+  height: auto;
+  border-radius: 3.125rem;
+  font-size: 0.875rem;
+}
+.bio__header__details a:active {
+  animation: click 300ms ease forwards;
+}
+.bio__header__details a:hover {
+  opacity: 0.6;
+}
+.bio__header__details a img {
+  width: 10%;
+  height: 10%;
+}
+.bio__header__details__image {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background: #EEEEEE;
+  background-image: url("../../images/bitmoji-3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 64em) {
+  .bio__header__details__image {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+}
+.bio__header__perks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0;
+}
+.bio__header__perks .perks__details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background: #EEEEEE;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.625rem;
+}
+@media (min-width: 64em) {
+  .bio__header__perks .perks__details {
+    gap: 2rem;
+  }
+}
+.bio__header__perks .perks__details div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.275rem;
+  background: #e5e3e3;
+  border-radius: 2rem;
+}
+@media (min-width: 64em) {
+  .bio__header__perks .perks__details div:first-child {
+    padding: 0.5rem;
+  }
+}
+.bio__header__perks .perks__details div:first-child img {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+@media (min-width: 64em) {
+  .bio__header__perks .perks__details div:first-child img {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+.bio__header__perks .perks__details div:last-child {
+  width: auto;
+  height: auto;
+  font-size: 0.475rem;
+  font-weight: 500;
+  padding: 0.275rem;
+  background: #e5e3e3;
+  border-radius: 2rem;
+}
+@media (min-width: 64em) {
+  .bio__header__perks .perks__details div:last-child {
+    font-size: 0.675rem;
+  }
+}
+.bio__header__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4rem;
+}
+.bio__header__text h1 {
+  font-size: 1.25rem;
+}
+@media (min-width: 40em) {
+  .bio__header__text h1 {
+    padding: 0 6rem;
+  }
+}
+@media (min-width: 64em) {
+  .bio__header__text h1 {
+    font-size: 2rem;
+    padding: 0;
+  }
+}
+.bio__header__text p {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0;
+}
+@media (min-width: 64em) {
+  .bio__header__text p {
+    font-size: 1.25rem;
+  }
+}
+.bio__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5%;
+}
+@media (min-width: 64em) {
+  .bio__text {
+    padding: 0 10% 0 5%;
+  }
+}
+.bio__text h1 {
+  font-size: 1.25rem;
+}
+@media (min-width: 64em) {
+  .bio__text h1 {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 64em) {
+  .bio__text ul {
+    margin-left: -3rem;
+  }
+}
+.bio__text ul li {
+  list-style-type: disc;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+.bio__text ul li:not(last-child) {
+  margin-bottom: 0.8rem;
+}
+@media (min-width: 64em) {
+  .bio__text ul li {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+}
+.bio__file {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -1rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  padding: 0.4rem 0.8rem;
+}
+@media (min-width: 64em) {
+  .bio__file {
+    margin-top: -1rem;
+  }
+}
+.bio__file p {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.bio__file__details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.bio__file__details a {
+  background: #EEEEEE;
+  color: #000000;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.6rem 1rem;
+  border: 1px solid #EEEEEE;
+  outline: none;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+@media (min-width: 64em) {
+  .bio__file__details a {
+    border: 2px solid #EEEEEE;
+  }
+}
+.bio__file__details a:hover {
+  border: 1px solid #000000;
+}
+@media (min-width: 64em) {
+  .bio__file__details a:hover {
+    border: 2px solid #000000;
+  }
+}
+.bio__file__details button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  background: #000000;
+  color: #ffffff;
+  border-radius: 2rem;
+  border: 1px solid #000000;
+  font-size: 0.875rem;
+  font-weight: 500;
+  outline: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  transition: all 300ms ease;
+  cursor: pointer;
+}
+.bio__file__details button:hover {
+  background: #ffffff;
+  color: #000000;
+  font-weight: 600;
+  border: 2px solid #ffffff;
+}
+@media (min-width: 64em) {
+  .bio__file__details button {
+    border: 2px solid #000000;
+  }
+}
+.bio__file__details button svg {
+  width: 1rem;
+  height: auto;
+}
+
+.fade {
+  color: #B8B8B8;
+  font-weight: 600;
+}
+
+.small {
+  font-size: 0.675rem;
+}
+@media (min-width: 64em) {
+  .small {
+    font-size: 0.875rem;
+  }
+}

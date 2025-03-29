@@ -1,0 +1,93 @@
+@import "../../variables";
+@import "../../mixins";
+@import "../../animation";
+
+.qrcode {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  z-index: 7;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    color: #000000;
+    text-align: center;
+    padding: 2rem;
+    width: 80%;
+    height: 35%;
+    border-radius: 1rem;
+
+    @include breakpoint-up(medium) {
+      width: 50%;
+      height: 40%;
+      padding: 3rem;
+    }
+
+    @include breakpoint-up(large) {
+      width: 40%;
+      height: 65%;
+    }
+
+    @include breakpoint-up(x-large) {
+      padding: 4rem;
+    }
+
+    h1 {
+      font-size: 1.25rem;
+      font-weight: $semi_bold;
+      letter-spacing: -0.32px;
+      margin: 0;
+
+      @include breakpoint-up(large) {
+        font-size: 2rem;
+        line-height: 3rem;
+      }
+    }
+
+    img {
+      width: 10rem;
+      height: auto;
+
+      @include breakpoint-up(large) {
+        width: 15rem;
+      }
+
+      @include breakpoint-up(x-large) {
+        width: 25rem;
+      }
+    }
+
+    &__button {
+      text-align: center;
+      background: $black;
+      color: $white;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      border: 1px solid $black;
+      border-radius: 5rem;
+      padding: 0.5rem;
+      transform: scale(1);
+      opacity: 1;
+      cursor: pointer;
+
+      @include breakpoint-up(large) {
+        transform: scale(1.5);
+      }
+
+      @include breakpoint-up(x-large) {
+        transform: scale(2);
+      }
+    }
+  }
+}
