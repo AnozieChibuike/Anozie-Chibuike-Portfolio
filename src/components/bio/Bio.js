@@ -5,7 +5,7 @@ import excellencePerk from "../../icons/excellence.png";
 import speedPerk from "../../icons/speed.png";
 import qualityPerk from "../../icons/quality.png";
 import teamPlayPerk from "../../icons/team.png";
-// import resumeFile from "../../files/Peter Genesis.pdf";
+import resumeFile from "../../files/Anozie.pdf";
 import { MdOutlineQrCode2 } from "react-icons/md";
 import Aos from "aos";
 
@@ -153,7 +153,7 @@ const Bio = () => {
         <p>Download my CV here</p>
 
         <div className="bio__file__details">
-          <a href={""} rel="noreferrer" download>
+          <a href={resumeFile} rel="noreferrer" download>
             CV (PDF)
           </a>
           <button onClick={() => setQrCode(true)}>
