@@ -1,5 +1,5 @@
 # About my React Portfolio Website
- Website Preview Of My Portfolio https://peterokafor.vercel.app/)
+ Website Preview Of My Portfolio )
 
 
 ## Code layout
